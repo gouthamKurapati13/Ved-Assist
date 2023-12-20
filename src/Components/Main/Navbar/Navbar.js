@@ -27,7 +27,7 @@ function Navbar() {
                 <ul className={(showNavbar)?'nav-links active':'nav-links'}>
                     <li><a href="#home" className="active-link">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#">Team</a></li>
+                    <li><a href="#team">Team</a></li>
                     <div className="mob-btn-grp">
                         <button>Predict</button>
                         <button>Shop</button>
