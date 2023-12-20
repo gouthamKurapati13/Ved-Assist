@@ -50,7 +50,7 @@ function Footer() {
             <div className="footer_bottom">
                 <p>© 2023 VedAssist®</p>
                 <ul className="footer_bottom_list">
-                    <li><a href="#team">About Us</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#team">Our Team</a></li>
                 </ul>
             </div>
