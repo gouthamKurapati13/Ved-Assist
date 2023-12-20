@@ -1,12 +1,18 @@
 
+#theteam{
+    background-color: #1b2430f5;
+}
+
 #team {
-    color: #000;
+    color: #fff;
     text-align: center;
     font-family: Concert One;
-    font-size: 48px;
+    font-size: 4.5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-top: 5rem;
+
   }
   
   
@@ -18,6 +24,9 @@
     border: 3px solid #000;
     background: var(--Theme-colour, #6AFF8B);
     margin: 2rem;
+    padding-top: 5rem;
+    width: 20rem;
+    padding-bottom: 5rem;
   }
   
   #devnames {
@@ -30,7 +39,16 @@
     line-height: normal;
   
   }
-  
-  #devdiv img {
-    margin: 10px;
+ 
+ 
+  #devimg{
+    position: relative;
+    bottom: -5.5rem;
+  }
+
+  #teamrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
   }
