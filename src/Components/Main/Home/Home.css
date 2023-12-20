@@ -45,6 +45,7 @@
     justify-content: center;
     flex-direction: column;
     min-height: 80vh;
+    background-color: #1b2430f5;
 }
 
   #home h1 {
@@ -59,9 +60,9 @@
 }
   
 #home h2 {
-    color: #000;
+    color: #fff;
     text-align: center;
-    font-family: Content;
+    
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
@@ -71,9 +72,9 @@
 }
 
 #home h3 {
-    color: #000;
+    color: #fff;
     text-align: center;
-    font-family: Content;
+
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
