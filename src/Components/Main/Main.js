@@ -1,9 +1,11 @@
 import Navbar from "./Navbar/Navbar";
+import Home from "./Home/Home";
 
 function Main() {
     return (
         <>
             <Navbar />
+            <Home />
         </>
     );
 }
