@@ -109,3 +109,48 @@
 #button3:hover {
     box-shadow: none;
 }
+
+
+
+
+
+
+#team {
+  color: #000;
+  text-align: center;
+  font-family: Concert One;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+
+
+
+
+
+#devdiv {
+  align-items: center;
+  border-radius: 30px;
+  border: 3px solid #000;
+  background: var(--Theme-colour, #6AFF8B);
+  margin: 2rem;
+}
+
+#devnames {
+  color: #000;
+  text-align: center;
+  font-family: Dangrek;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+}
+
+#devdiv img {
+  margin: 10px;
+}
