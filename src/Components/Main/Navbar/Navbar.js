@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <>
-            <nav>
+            <nav id="my-nav">
                 <div className="logo">
                     <a href="#">
                         <img src={Logo} alt="Logo" />
@@ -25,9 +25,9 @@ function Navbar() {
                     <i className={menuIcon}></i>
                 </div>
                 <ul className={(showNavbar)?'nav-links active':'nav-links'}>
-                    <li><a href="#home" className="active-link">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#team">Team</a></li>
+                    <li><a href="#home" className="active-link" onClick={handleShowNavbar}>Home</a></li>
+                    <li><a href="#about" onClick={handleShowNavbar}>About</a></li>
+                    <li><a href="#team" onClick={handleShowNavbar}>Team</a></li>
                     <div className="mob-btn-grp">
                         <button>Predict</button>
                         <button>Shop</button>
