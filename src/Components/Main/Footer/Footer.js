@@ -30,19 +30,19 @@ function Footer() {
                         </div>
                         <div class="footer_icons">
                             <a href="https://www.linkedin.com">
-                                <img src="../assets/linkedIn.svg" alt={lkdin} /></a>
+                                <img src={lkdin} alt={lkdin} /></a>
                         </div>
                         <div class="footer_icons">
                             <a href="https://twitter.com/?lang=en">
-                                <img src="../assets/twitter.svg" alt={twtr} /></a>
+                                <img src={twtr} alt={twtr} /></a>
                         </div>
                         <div class="footer_icons">
                             <a href="https://www.youtube.com/">
-                                <img src="../assets/youtube.svg" alt={yt} /></a>
+                                <img src={yt} alt=""/></a>
                         </div>
                         <div class="footer_icons">
                             <a href="https://www.instagram.com/">
-                                <img src="../assets/instagram.svg" alt={ig} /></a>
+                                <img src={ig} alt={ig} /></a>
                         </div>
                     </div>
                 </div>
