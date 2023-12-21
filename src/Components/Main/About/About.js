@@ -17,7 +17,7 @@ function About() {
                 <div className="services">
                     <div className="about-desc">
                         <h3>The Predictor</h3>
-                        <p>
+                        <p id="para">
                             At VedAssist, we offer a
                             comprehensive range of
                             personalized Ayurvedic remedies.
