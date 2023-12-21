@@ -34,11 +34,9 @@ function Navbar() {
                     </div>
                 </ul>
                 <div className="btn-grp">
-                    <button>Predict</button>
-                    <button>Shop</button>
+                    <button type="submit">Predict</button>
+                    <button type="submit" formaction="/shop">Shop</button>
                 </div>
-
-                
             </nav>
         </>
     );
