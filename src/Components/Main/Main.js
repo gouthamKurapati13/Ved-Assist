@@ -3,6 +3,7 @@ import Home from "./Home/Home";
 import Team from "./Team/Team";
 import Footer from "./Footer/Footer";
 import About from "./About/About";
+import "./Main.css";
 
 window.onscroll = () => {
     document.querySelectorAll('section').forEach(sec => {
