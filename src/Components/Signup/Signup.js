@@ -29,10 +29,10 @@ function Signup() {
                             </div>
                         </div>
                         <h1>Sign Up</h1>
-                        <input type="text" placeholder="Username" required/>
-                        <input type="email" placeholder="Email" required/>
-                        <input type="password" placeholder="Password" required/>
-                        <input type="password" placeholder="ConfPassword" required/>
+                        <input type="text" placeholder="Username*" required/>
+                        <input type="email" placeholder="Email*" required/>
+                        <input type="password" placeholder="Password*" required/>
+                        <input type="password" placeholder="Confirm Password*" required/>
                         <button type="submit">Sign Up</button>
                         <span>Already have an account? <a href="/signin">Sign in now</a></span>
                     </form>
