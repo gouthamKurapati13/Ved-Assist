@@ -46,13 +46,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-section:nth-child(odd) {
-  background-color: var(--sec-bg-color);
-  min-height: 100vh;
-}
-
-section:nth-child(even) {
-  background-color: var(--bg-color);
-  min-height: 100vh;
-}

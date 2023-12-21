@@ -9,7 +9,7 @@ function Card({Devimg}) {
                 </div>
                 <div id="dev-div">
                     <h3>Lorem</h3>
-                    <h4>example@example.com</h4>
+                    <h4>Developer</h4>
                     <div className="socials">
                         <ul>
                             <li><a href=""><i className="fa fa-github"></i></a></li>

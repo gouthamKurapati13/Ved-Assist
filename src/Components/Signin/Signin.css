@@ -110,11 +110,14 @@ input {
     font-size: 1rem;
 }
 
-.container {
+body {
     background-image: url("./side-img.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.container {
     min-height: 100vh;
     min-width: 100vw;
     display: flex;

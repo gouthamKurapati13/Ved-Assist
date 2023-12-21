@@ -4,17 +4,23 @@
 }
 
 #dev-div {
+  color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     border-radius: 30px;
-    border: 3px solid #6AFF8B;
-    background: #6AFF8B;
+    border: 1px solid var(--main-color);
+    /* background: #6AFF8B; */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.5);
+    /* border: 1px solid rgba(255, 255, 255, 0.125); */
     margin: 2rem;
     padding: 4rem 2rem;
     padding-bottom: 0;
     height: fit-content;
+    min-width: 25%;
 }
   
   #dev-div h3 {
@@ -27,6 +33,7 @@
   #dev-img{
     position: relative;
     bottom: -5.5rem;
+    z-index: 10;
   }
 
   #dev-div .socials ul {
@@ -36,6 +43,7 @@
     align-items: center;
     padding-left: 0;
     justify-content: space-around;
+    color: var(--text-color);
   }
 
   #dev-div .socials ul li {
@@ -44,13 +52,12 @@
 
   #dev-div .socials ul li a {
     text-decoration: none;
-    color: black;
     transition: 0.3s ease;
+    font-size: 1.5rem;
   }
 
   #dev-div .socials ul li a:hover {
     transform: translateZ(2rem);
-    font-weight: 500;
   }
 
   #dev-div:hover {
