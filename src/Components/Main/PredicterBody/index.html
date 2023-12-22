@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./PredicterBody.css">
+</head>
+<body>
+    <div id="maindiv">
+        <h2>Provide your details here</h2>
+        <form action="#">
+        <div class="row align-items-center">
+            <input type="number" id="age" name="age" placeholder="Age" min="0"><br>
+            
+            <form action="#">
+            
+                <select name="gender" id="gender">
+                    <option value="" disabled selected>Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                 
+                </select>
+          </form>
+
+          <!-- <input type="text" id="gender" name="gender" placeholder="Gender"><br> -->
+            <input type="number" id="weight" name="weight" placeholder="Weight" min="0">
+
+          </form>
+        </div>
+        <div class="row">
+          <h2>Provide your symptoms here</h2>
+        </div>
+        
+
+            <div>
+                <div class="row" id="symptoms">
+                <label for="cold">Cold</label>
+                <input type="checkbox" id="cold" name="cold"  />
+              
+                
+                <label for="fever">Fever</label>
+                <input type="checkbox" id="fever" name="fever" />
+            
+
+                <label for="cough">Cough</label>
+                <input type="checkbox" id="cough" name="cough"  />
+              
+            </div>
+            <div class="row" id="symptoms">
+                <label for="dizziness">Dizziness</label>
+                <input type="checkbox" id="dizziness" name="dizziness" />
+
+                
+                <label for="vomiting">Vomiting</label>
+                <input type="checkbox" id="vomiting" name="vomiting"  />
+              
+                
+                <label for="diarrhoea">Diarrhoea</label>
+                <input type="checkbox" id="diarrhoea" name="diarrhoea" />
+            </div>
+
+            <div class="row" id="symptoms">
+                <label for="eyepain">Eyepain</label>
+                <input type="checkbox" id="eyepain" name="eyepain"  />
+              
+                
+                <label for="headache">Headache</label>
+                <input type="checkbox" id="headache" name="headache" />
+
+                
+                <label for="stomachpain">Stomach pain</label>
+                <input type="checkbox" id="stomachpain" name="stomachpain"  />
+              </div>
+
+
+                <div class="row" id="symptoms">
+                
+                <label for="chestpain">Chest pain</label>
+                <input type="checkbox" id="chestpain" name="chestpain" />
+                
+
+                <label for="jointpain">Joint pain</label>
+                <input type="checkbox" id="jointpain" name="jointpain"  />
+              
+                
+                <label for="throatpain">Throat pain</label>
+                <input type="checkbox" id="throatpain" name="throatpain" />
+              </div>
+
+
+    </div>
+        
+        
+    </div>
+
+
+
+
+
+
+</body>
+</html>
