@@ -1,13 +1,16 @@
 import "./Predict.css"
+import Navbar from "../Main/Navbar/Navbar";
 
 function Predict() {
     return (
         <>
+            <Navbar />
             <div className="predict">
             <div className="container" id="container">
                 <div className="form-container log-in-container">
                     <form action="#">
-                        <h1>Predictor</h1>
+                        <h1 className="heading">Predictor</h1>
+                        <span>Get best Ayurvedic predictions without any side effects</span>
                         <div className="input-group">
                             <input type="number" placeholder="Age" required/>
                             <select id="gender" name="gender" form="" defaultValue="">
@@ -71,8 +74,7 @@ function Predict() {
                                 </div>
                             </div>
                         </div>
-                        <button type="submit">Sign Up</button>
-                        <span>Already have an account? <a href="/signin">Sign in now</a></span>
+                        <button type="submit">Predict Now</button>
                     </form>
                 </div>
 

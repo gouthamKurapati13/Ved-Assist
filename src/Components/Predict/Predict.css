@@ -1,9 +1,29 @@
 .predict {
   min-height: 100vh;
   min-width: 100vh;
+  background-image: url("./bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .input-group {
   display: flex;
   gap: 1rem;
+}
+
+
+.predict .container form {
+  margin-top: 4rem;
+  border-radius: 1px;
+  min-width: 100vw;
+  backdrop-filter: none;
+    background-color: rgba(17, 25, 40, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    padding-top: 1rem;
+  min-height: 100vh;
+}
+
+.predict .container form h1 {
+  padding-top: 0;
 }

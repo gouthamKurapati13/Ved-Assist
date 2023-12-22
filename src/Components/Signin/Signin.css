@@ -43,7 +43,7 @@ span {
     margin-bottom: 2.5rem;
 }
 
-a {
+a, .predict span  {
 	color: var(--sec-color);
 	font-size: 14px;
 	text-decoration: none;
@@ -236,14 +236,18 @@ body {
   }
 
   .check-list-container {
-    width: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
     padding: 2rem;
+    justify-content: center;
+    flex-direction: column;
   }
 
 
   .check-list {
-    width: 100%;
+    width: 50%;
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: auto;
+    column-gap: 3rem;
   }
