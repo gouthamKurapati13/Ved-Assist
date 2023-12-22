@@ -25,17 +25,17 @@ function Navbar() {
                     <i className={menuIcon}></i>
                 </div>
                 <ul className={(showNavbar)?'nav-links active':'nav-links'}>
-                    <li><a href="#home" className="active-link" onClick={handleShowNavbar}>Home</a></li>
-                    <li><a href="#about" onClick={handleShowNavbar}>About</a></li>
-                    <li><a href="#team" onClick={handleShowNavbar}>Team</a></li>
+                    <li><a href="/#home" onClick={handleShowNavbar}>Home</a></li>
+                    <li><a href="/#about" onClick={handleShowNavbar}>About</a></li>
+                    <li><a href="/#team" onClick={handleShowNavbar}>Team</a></li>
                     <div className="mob-btn-grp">
-                        <button>Predict</button>
+                        <button onClick={event =>  window.location.href='predict'}>Predict</button>
                         <button>Shop</button>
                     </div>
                 </ul>
                 <div className="btn-grp">
-                    <button type="submit">Predict</button>
-                    <button type="submit" formaction="/shop">Shop</button>
+                    <button type="submit" onClick={event =>  window.location.href='/predict'}>Predict</button>
+                    <button type="submit" onClick={event =>  window.location.href='/shop'}>Shop</button>
                 </div>
             </nav>
         </>
