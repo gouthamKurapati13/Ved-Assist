@@ -10,6 +10,7 @@
     color: white;
 }
 
+
 #about h1 {
     font-size: 3rem;
     color: var(--text-color);
@@ -41,6 +42,7 @@
 #about .about-desc p {
     text-align: justify;
     font-size: 1.3rem;
+    font-weight: 320;
 }
 
 #about .services {
