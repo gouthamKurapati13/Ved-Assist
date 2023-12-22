@@ -25,52 +25,52 @@ function Predict() {
                             <p>Selct your Symptoms</p>
                             <div className="check-list">
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Cold</label>
+                                    <input id="Cold" className="substituted focus:ring-offset-0" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Cold">Cold</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Cough</label>
+                                    <input id="Cough" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Cough">Cough</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Fever</label>
+                                    <input id="Fever" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Fever">Fever</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Dizziness</label>
+                                    <input id="Dizziness" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Dizziness">Dizziness</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Vomiting</label>
+                                    <input id="Vomiting" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Vomiting">Vomiting</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Diarrhoea</label>
+                                    <input id="Diarrhoea" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Diarrhoea">Diarrhoea</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Eyepain</label>
+                                    <input id="Eyepain" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Eyepain">Eyepain</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Headache</label>
+                                    <input id="Headache" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="Headache">Headache</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Stomach Pain</label>
+                                    <input id="StomachPain" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="StomachPain">Stomach Pain</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Chest Pain</label>
+                                    <input id="ChestPain" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="ChestPain">Chest Pain</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Joint Pain</label>
+                                    <input id="JointPain" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="JointPain">Joint Pain</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
-                                    <input id="example-1" className="substituted" type="checkbox" aria-hidden="true" />
-                                    <label htmlFor="example-1">Throat Pain</label>
+                                    <input id="ThroatPain" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <label htmlFor="ThroatPain">Throat Pain</label>
                                 </div>
                             </div>
                         </div>
