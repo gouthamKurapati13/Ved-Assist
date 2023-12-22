@@ -1,0 +1,47 @@
+#mainsection{
+    border-style: solid;
+    border-color: #000;
+    border-width: .2rem;
+    border-radius: 4rem;
+    margin: 7rem;
+}
+
+
+
+#buybutton{
+    margin: 1.5rem;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+
+#productdiv {
+    border-radius: 30px;
+    border: 3px solid #000;
+    background: var(--Theme-colour, #6AFF8B);
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+#productnames {
+    color: #000;
+    text-align: center;
+    font-family: Dangrek;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+#productdiv img {
+    margin: 10px;
+}
+
+
+
+
+
+section{
+    margin: 5rem;
+}
