@@ -165,7 +165,7 @@
   .action .menu ul li {
     list-style: none;
     padding: 8px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(158, 154, 154, 0.589);
     display: flex;
     align-items: center;
   }
