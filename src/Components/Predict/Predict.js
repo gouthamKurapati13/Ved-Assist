@@ -13,14 +13,14 @@ function Predict() {
                         <h1 className="heading">Predictor</h1>
                         <span>Get best Ayurvedic predictions without any side effects</span>
                         <div className="input-group">
-                            <input type="number" placeholder="Age" required/>
+                            <input type="number" placeholder="Age" required min="0" max="150"/>
                             <select id="gender" name="gender" form="" defaultValue="">
                                 <option value="" disabled>Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                                 <option value="Other">Other</option>
                             </select>
-                            <input type="number" placeholder="Weight" step="0.01" min="0" max="10" />
+                            <input type="number" placeholder="Weight" step="0.01" min="0" max="500" />
                         </div>
                         <div className="check-list-container">
                             <p>Selct your Symptoms</p>
