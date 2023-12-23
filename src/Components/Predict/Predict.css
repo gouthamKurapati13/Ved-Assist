@@ -25,5 +25,15 @@
 }
 
 .predict .container form h1 {
-  padding-top: 0;
+  padding-top: 4rem;
+}
+
+.medicines-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-top: 4rem;
 }

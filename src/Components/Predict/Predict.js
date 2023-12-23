@@ -1,5 +1,6 @@
 import "./Predict.css"
 import Navbar from "../Main/Navbar/Navbar";
+import Medicine from "./Medicine/Medicine";
 
 function Predict() {
     return (
@@ -25,7 +26,7 @@ function Predict() {
                             <p>Selct your Symptoms</p>
                             <div className="check-list">
                                 <div className="checkbox-wrapper-1">
-                                    <input id="Cold" className="substituted focus:ring-offset-0" type="checkbox" aria-hidden="true" />
+                                    <input id="Cold" className="substituted" type="checkbox" aria-hidden="true" />
                                     <label htmlFor="Cold">Cold</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
@@ -75,7 +76,13 @@ function Predict() {
                             </div>
                         </div>
                         <button type="submit">Predict Now</button>
+                        <div className="medicines-row">
+                            <Medicine />
+                            <Medicine />
+                            <Medicine />
+                        </div>
                     </form>
+
                 </div>
 
 	        </div>

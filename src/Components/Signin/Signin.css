@@ -23,7 +23,7 @@ h1 {
     position: relative;
 }
 
-h1::after {
+.main-heading::after {
     content: "";
     width: 50%;
     height: 3px;
