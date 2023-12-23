@@ -29,7 +29,7 @@ function Signin() {
                                 </div>
                             </div>
                         </div>
-                        <h1>Sign In</h1>
+                        <h1 class="main-heading">Sign In</h1>
                         <input type="text" placeholder="Username" required/>
                         <input type="password" placeholder="Password" required/>
                         <a href="#" class="forgot">Forgot your password?</a>

@@ -3,6 +3,7 @@ import Main from "./Components/Main/Main";
 import Signin from './Components/Signin/Signin';
 import Signup from './Components/Signup/Signup';
 import Predict from './Components/Predict/Predict';
+import Shop from './Components/Shop/Shop';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/signin" element={ <Signin />} />
           <Route path="/signup" element={ <Signup />} />
           <Route path="/predict" element={ <Predict />} />
+          <Route path="/shop" element={ <Shop />} />
           {/* <Route path="/predict" element={ <Main />} /> */}
           {/* <Route path="/shop" element={ <Shop />} /> */}
           {/* <Route path="/shop" element={ <Shop />} /> */}
