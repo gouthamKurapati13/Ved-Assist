@@ -1,8 +1,54 @@
 import "./Predict.css"
 import Navbar from "../Main/Navbar/Navbar";
 import Medicine from "./Medicine/Medicine";
+import axios from "axios";
+import { useState } from "react";
 
 function Predict() {
+    
+    var handleSubmit = async (e) => {
+        e.preventDefault();
+        var FormField = new FormData();
+        FormField.append("age", document.querySelector('#age').value);
+        FormField.append("gender", document.querySelector('#gender').value);
+        FormField.append("weight", document.querySelector('#weight').value);
+        FormField.append("cold", (document.getElementById('Cold').checked)?1:0);
+        FormField.append("cough", (document.getElementById('Cough').checked)?1:0);
+        FormField.append("fever", (document.getElementById('Fever').checked)?1:0);
+        FormField.append("dizziness", (document.getElementById('Dizziness').checked)?1:0);
+        FormField.append("vomiting", (document.getElementById('Vomiting').checked)?1:0);
+        FormField.append("diarrhoea", (document.getElementById('Diarrhoea').checked)?1:0);
+        FormField.append("eyepain", (document.getElementById('Eyepain').checked)?1:0);
+        FormField.append("headache", (document.getElementById('Headache').checked)?1:0);
+        FormField.append("stomachPain", (document.getElementById('StomachPain').checked)?1:0);
+        FormField.append("chestPain", (document.getElementById('ChestPain').checked)?1:0);
+        FormField.append("jointPain", (document.getElementById('JointPain').checked)?1:0);
+        FormField.append("throatPain", (document.getElementById('ThroatPain').checked)?1:0);
+        console.log(FormField);
+
+        // var data = {username:username, email:email, password:password, cpassword:cpassword};
+
+        await axios({
+            method: "POST",
+            url: "http://127.0.0.1:8000/predict",
+            data: FormField,
+            headers: {
+                'accept': 'application/json',
+                'content-type': 'multipart/form-data',
+            },
+           
+        })
+        .then(res=>{
+            console.log("Successful");
+            console.log(res.data);
+            setTimeout(() => {},10000)
+        })
+        .catch(err => {
+            console.log("Error");
+            console.log(err);
+        })
+    }
+
     return (
         <>
             <Navbar />
@@ -13,20 +59,19 @@ function Predict() {
                         <h1 className="heading">Predictor</h1>
                         <span>Get best Ayurvedic predictions without any side effects</span>
                         <div className="input-group">
-                            <input type="number" placeholder="Age" required min="0" max="150"/>
+                            <input type="number" id="age" placeholder="Age" required min="0" max="150"/>
                             <select id="gender" name="gender" form="" defaultValue="">
                                 <option value="" disabled>Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-                                <option value="Other">Other</option>
                             </select>
-                            <input type="number" placeholder="Weight" step="0.01" min="0" max="500" />
+                            <input type="number" id="weight" placeholder="Weight" step="0.01" min="0" max="500" />
                         </div>
                         <div className="check-list-container">
                             <p>Selct your Symptoms</p>
                             <div className="check-list">
                                 <div className="checkbox-wrapper-1">
-                                    <input id="Cold" className="substituted" type="checkbox" aria-hidden="true" />
+                                    <input id="Cold" className="substituted" type="checkbox" aria-hidden="true"/>
                                     <label htmlFor="Cold">Cold</label>
                                 </div>
                                 <div className="checkbox-wrapper-1">
@@ -75,7 +120,7 @@ function Predict() {
                                 </div>
                             </div>
                         </div>
-                        <button type="submit">Predict Now</button>
+                        <button type="submit" onClick={handleSubmit}>Predict Now</button>
                         <div className="medicines-row">
                             <Medicine />
                             <Medicine />
