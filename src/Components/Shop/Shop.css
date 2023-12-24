@@ -190,3 +190,66 @@
   .action .menu ul li:hover a {
     color: var(--main-color);
   }
+
+
+  /* ... (previous styles) ... */
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 1200px) {
+  .shop-nav {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .shop-nav {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+
+  .search {
+      min-width: 100%;
+  }
+
+  .shop-container .medicines-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .shop-nav {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+  }
+
+  .search input {
+      width: 100%;
+      margin-right: 0;
+  }
+
+  .search button {
+      width: 100%;
+  }
+
+  .shop-container {
+      padding: 1rem;
+  }
+
+  .shop-container h2,
+  .shop-container p {
+      text-align: left;
+  }
+
+  /* Stack Medicine components on top of each other */
+  .medicines-row {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+  
