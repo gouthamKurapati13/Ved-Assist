@@ -240,7 +240,7 @@
 
   .shop-container h2,
   .shop-container p {
-      text-align: left;
+      text-align: center;
   }
 
   /* Stack Medicine components on top of each other */
