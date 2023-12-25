@@ -62,12 +62,11 @@ function Shop() {
                     <h2>One stop for all your Ayurvedic medicines</h2>
                     <p>Make sure to read the description before buying</p>
                     <div className="medicines-row">
-                            <Medicine />
-                            <Medicine />
-                            <Medicine />
-                            <Medicine />
-                            <Medicine />
-                            <Medicine />
+                    {
+                        medicines.map((med) => (
+                                    <Medicine name={med.name} desc={med.description} price={med.price}/>
+                        ))
+                    }
                     </div>
                 </div>
             </div>
