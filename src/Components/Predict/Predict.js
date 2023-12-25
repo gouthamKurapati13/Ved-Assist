@@ -135,11 +135,13 @@ function Predict() {
                             </div>
                         </div>
                         <button type="submit" onClick={handleSubmit}>Predict Now</button>
-                        <div className="medicines-row">
+                        <div className="predit-output">
                             <div className={spinner}></div>
-                            {medicines.map((med) => (
-                                <Medicine name={med.name} desc={med.description} price={med.price}/>
-                            ))}
+                            <div className="medicines-row">
+                                {medicines.map((med) => (
+                                    <Medicine name={med.name} desc={med.description} price={med.price}/>
+                                ))}
+                            </div>
                         </div>
                     </form>
 
