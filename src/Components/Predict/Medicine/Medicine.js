@@ -14,7 +14,7 @@ function Medicine({name, desc, price}) {
                 </div>
                 <div class="button-wrapper"> 
                 {/* <button class="btn outline">DETAILS</button> */}
-                    <button class="btn fill">{price}<br />BUY NOW</button>
+                    <button class="btn fill">Rs. {price}/-<br />BUY NOW</button>
                 </div>
             </div>
         </>

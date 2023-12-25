@@ -87,7 +87,7 @@ function Predict() {
                         <h1 className="heading">Predictor</h1>
                         <span>Get best Ayurvedic predictions without any side effects</span>
                         <div className="input-group">
-                            <input type="number" id="age" placeholder="Age" required min="0" max="150" required />
+                            <input type="number" id="age" placeholder="Age" required min="0" max="150" />
                             <select id="gender" name="gender" form="predict-form" defaultValue="" required>
                                 <option value="" disabled>Gender</option>
                                 <option value="Male">Male</option>
