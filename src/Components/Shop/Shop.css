@@ -82,27 +82,34 @@
 .shop-container .medicines-row {
     display: grid;
     grid-template-columns: auto auto auto;
+    /* align-items: center;
+    justify-content: center; */
+    grid-auto-rows: 1fr;
+    
     margin: 0;
+    margin-top: auto;
+}
+
+.shop-container .medicines-row .med-container {
+  width: 25vw;
+  min-height: 100%;
 }
 
 .shop-container h2 {
     text-align: center;
+    word-wrap: break-word;
 }
 
-.shop-container p { 
+/* .shop-container p { 
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
-}
+} */
 
-
-
-.action {
-    position: fixed;
-    top: 20px;
-    right: 30px;
+  .caution-mssg {
+    text-align: center;
   }
-  
+
   .action .profile {
     position: relative;
     width: 60px;
@@ -124,7 +131,7 @@
   .action .menu {
     position: absolute;
     top: 120px;
-    right: -10px;
+    right: 20px;
     padding: 10px 20px;
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -262,7 +269,7 @@
 
   
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
   .shop-nav {
       padding-left: 2rem;
       padding-right: 2rem;
@@ -273,7 +280,7 @@
 
   .search {
       min-width: 60;
-      margin-right: 8rem; /*search bar shrink */
+      margin-right: 8rem;
   }
 
   .search input {
@@ -282,7 +289,7 @@
   }
 
   .search button {
-      width: 40px; /*adjust width of the search button*/
+      width: 40px; 
       
   }
 
@@ -303,7 +310,7 @@
       height: 100%;
       border-radius: 50%;
   }
-}
+} */
 
 
 

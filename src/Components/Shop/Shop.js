@@ -41,7 +41,7 @@ function Shop() {
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </div>
                     <div class="action">
-                        <div class="profile"> /* onclick="menuToggle();" */
+                        <div class="profile">
                             <img src={Avatar} />
                         </div>
                         <div class="menu">
@@ -60,7 +60,7 @@ function Shop() {
                 <div className="shop-container">
                     <h1 className="heading">Shop</h1>
                     <h2>One stop for all your Ayurvedic medicines</h2>
-                    <p>Make sure to read the description before buying</p>
+                    <p className="caution-mssg">Make sure to read the description before buying</p>
                     <div className="medicines-row">
                     {
                         medicines.map((med) => (
