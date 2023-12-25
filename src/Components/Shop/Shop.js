@@ -24,7 +24,7 @@ function Shop() {
         .then(res=>
             {
                 console.log("Search Successful");
-                console.log(res.data);
+                setMedicines(res.data.medicines);
             })
             .then(err =>{
             })
