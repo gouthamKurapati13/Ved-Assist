@@ -136,7 +136,9 @@ function Predict() {
                         </div>
                         <button type="submit" onClick={handleSubmit}>Predict Now</button>
                         <div className="predit-output">
-                            <div className={spinner}></div>
+                            <div className="loader-div">
+                                <div className={spinner}></div>
+                            </div>
                             <div className="medicines-row">
                                 {medicines.map((med) => (
                                     <Medicine name={med.name} desc={med.description} price={med.price}/>
