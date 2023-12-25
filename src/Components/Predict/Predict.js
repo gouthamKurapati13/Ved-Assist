@@ -2,10 +2,15 @@ import "./Predict.css"
 import Navbar from "../Main/Navbar/Navbar";
 import Medicine from "./Medicine/Medicine";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Predict() {
     const [medicines, setMedicines] = useState([]);
+    const [spinner, setSpinner] = useState("");
+    useEffect(() => {
+        if (spinner==="loader")
+            window.scrollTo(0, 200);
+      }, [spinner]);
     var handleSubmit = async (e) => {
         e.preventDefault();
         var age = document.querySelector('#age').value;
@@ -31,31 +36,11 @@ function Predict() {
                 "throatPain": (document.getElementById('ThroatPain').checked)?1:0
             }
             console.log(data);
+            setSpinner("loader");
         }
         else {
             alert("please enter all fields...");
         }
-            
-        
-        // var FormField = new FormData();
-        // FormField.append("age", document.querySelector('#age').value);
-        // FormField.append("gender", document.querySelector('#gender').value);
-        // FormField.append("weight", document.querySelector('#weight').value);
-        // FormField.append("cold", (document.getElementById('Cold').checked)?1:0);
-        // FormField.append("cough", (document.getElementById('Cough').checked)?1:0);
-        // FormField.append("fever", (document.getElementById('Fever').checked)?1:0);
-        // FormField.append("dizziness", (document.getElementById('Dizziness').checked)?1:0);
-        // FormField.append("vomiting", (document.getElementById('Vomiting').checked)?1:0);
-        // FormField.append("diarrhoea", (document.getElementById('Diarrhoea').checked)?1:0);
-        // FormField.append("eyepain", (document.getElementById('Eyepain').checked)?1:0);
-        // FormField.append("headache", (document.getElementById('Headache').checked)?1:0);
-        // FormField.append("stomachPain", (document.getElementById('StomachPain').checked)?1:0);
-        // FormField.append("chestPain", (document.getElementById('ChestPain').checked)?1:0);
-        // FormField.append("jointPain", (document.getElementById('JointPain').checked)?1:0);
-        // FormField.append("throatPain", (document.getElementById('ThroatPain').checked)?1:0);
-        // console.log(data);
-
-        // var data = {username:username, email:email, password:password, cpassword:cpassword};
         await axios({
             method: "POST",
             url: "http://127.0.0.1:8000/predict",
@@ -69,6 +54,7 @@ function Predict() {
         .then(res=>{
             console.log("Successful");
             console.log(res.data.medicines);
+            setSpinner("");
             setMedicines(res.data.medicines);
         })
         .catch(err => {
@@ -90,8 +76,8 @@ function Predict() {
                             <input type="number" id="age" placeholder="Age" required min="0" max="150" />
                             <select id="gender" name="gender" form="predict-form" defaultValue="" required>
                                 <option value="" disabled>Gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="3">Male</option>
+                                <option value="4">Female</option>
                             </select>
                             <input type="number" id="weight" placeholder="Weight" step="0.01" min="0" max="500" required />
                         </div>
@@ -150,6 +136,7 @@ function Predict() {
                         </div>
                         <button type="submit" onClick={handleSubmit}>Predict Now</button>
                         <div className="medicines-row">
+                            <div className={spinner}></div>
                             {medicines.map((med) => (
                                 <Medicine name={med.name} desc={med.description} price={med.price}/>
                             ))}
