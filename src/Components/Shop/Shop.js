@@ -22,7 +22,7 @@ function Shop() {
         .then(res=>{
             console.log("Successful");
             console.log(res.data.medicines);
-            // setMedicines(res.data.medicines);
+            setMedicines(res.data.medicines);
         })
         .catch(err => {
             console.log("Error");
