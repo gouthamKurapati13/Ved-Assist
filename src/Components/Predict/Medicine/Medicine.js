@@ -1,7 +1,7 @@
 import "./Medicine.css";
 import med from "./med-1.png";
 
-function Medicine() {
+function Medicine({name, desc, price}) {
     return (
         <>
             <div class="med-container">
@@ -9,13 +9,12 @@ function Medicine() {
                 <div class="banner-image"> 
                     <img src={med} />
                 </div>
-                <h1> Medicine name </h1>
-                <p>Lorem ipsum dolor sit amet, <br/>
-                consectetur adipiscing elit.</p>
+                <h1> {name} </h1>
+                <p>{desc}</p>
                 </div>
                 <div class="button-wrapper"> 
                 {/* <button class="btn outline">DETAILS</button> */}
-                    <button class="btn fill">Rs. 179/-<br />BUY NOW</button>
+                    <button class="btn fill">{price}<br />BUY NOW</button>
                 </div>
             </div>
         </>

@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 
 function Predict() {
-    
+    const [medicines, setMedicines] = useState([]);
     var handleSubmit = async (e) => {
         e.preventDefault();
         var age = document.querySelector('#age').value;
@@ -56,7 +56,6 @@ function Predict() {
         // console.log(data);
 
         // var data = {username:username, email:email, password:password, cpassword:cpassword};
-
         await axios({
             method: "POST",
             url: "http://127.0.0.1:8000/predict",
@@ -70,6 +69,7 @@ function Predict() {
         .then(res=>{
             console.log("Successful");
             console.log(res.data);
+            setMedicines(res);
             setTimeout(() => {},10000)
         })
         .catch(err => {
@@ -151,9 +151,9 @@ function Predict() {
                         </div>
                         <button type="submit" onClick={handleSubmit}>Predict Now</button>
                         <div className="medicines-row">
-                            <Medicine />
-                            <Medicine />
-                            <Medicine />
+                            {medicines.map((med) => (
+                                <Medicine name={med.name} desc={med.description} price={med.price}/>
+                            ))}
                         </div>
                     </form>
 
