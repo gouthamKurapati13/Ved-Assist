@@ -5,6 +5,27 @@ import Logo from "./Logo.png";
 import Avatar from "./avatar.jpg";
 
 function Shop() {
+    const [medicines, setMedicines] = useState([]);
+    await axios({
+        method: "POST",
+        url: "http://127.0.0.1:8000/shop",
+        data: [],
+        headers: {
+            'accept': 'application/json',
+            'content-type': 'multipart/form-data',
+        },
+       
+    })
+    .then(res=>{
+        console.log("Successful");
+        console.log(res.data.medicines);
+        setMedicines(res.data.medicines);
+    })
+    .catch(err => {
+        console.log("Error");
+        console.log(err);
+    })
+}
     return (
         <>             
             <div className="shop">
