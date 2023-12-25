@@ -7,7 +7,28 @@ import axios from "axios";
 import { useState } from "react";
 
 function Shop() {
+    const [searchText , setSearchText] = useState("");
     const [medicines, setMedicines] = useState([]);
+    var handleSearch = async () =>{
+        var Search = new FormData();
+        Search.append("searchText", searchText);
+        await axios({
+            method: "POST",
+            url: "http://127.0.0.1:8000/shop/search",
+            data: Search,
+            headers: {
+                'accept': 'application/json',
+                'content-type':'multipart/form-data',
+            },
+        })
+        .then(res=>
+            {
+                console.log("Search Successful");
+                console.log(res.data);
+            })
+            .then(err =>{
+            })
+    }
     window.onload = async (event) => {
         await axios({
             method: "POST",
@@ -37,8 +58,8 @@ function Shop() {
                         <a href="/"><img src={Logo} /></a>
                     </div>
                     <div className="search">
-                        <input type="text" placeholder="Search.." />
-                        <button type="submit"><i class="fa fa-search"></i></button>
+                        <input type="text" name = "searchText" value = {searchText} onChange = {(e)=>setSearchText(e.target.value)} placeholder="Search.." />
+                        <button type="submit" onClick={handleSearch}><i class="fa fa-search"></i></button>
                     </div>
                     <div class="action">
                         <div class="profile"> /* onclick="menuToggle();" */
