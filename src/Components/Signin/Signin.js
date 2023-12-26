@@ -3,8 +3,41 @@ import Logo from "./Logo.png";
 import lkdin from "./linkedIn.svg";
 import twtr from "./twitter.svg";
 import yt from "./youtube.svg";
+import axios from "axios";
 
 function Signin() {
+    var handleSubmit = async (e) => {
+        e.preventDefault();
+        var uname = document.querySelector('#username').value;
+        var pass = document.querySelector('#password').value;
+        var data = {};
+        if (uname && pass) {
+            data = {
+                "username": uname,
+                "password": pass,
+            }
+            console.log(data);
+        }
+        else {
+            alert("please enter all fields...");
+        }
+        await axios({
+            method: "POST",
+            url: "http://127.0.0.1:8000/login",
+            data: data,
+            headers: {
+                'accept': 'application/json',
+                'content-type': 'multipart/form-data',
+            },
+        })
+        .then(res=>{
+            console.log("Successful");
+        })
+        .catch(err => {
+            console.log("Error");
+            console.log(err);
+        })
+    }
     return (
         <>
             <div class="container" id="container">
@@ -30,10 +63,10 @@ function Signin() {
                             </div>
                         </div>
                         <h1 class="main-heading">Sign In</h1>
-                        <input type="text" placeholder="Username" required/>
-                        <input type="password" placeholder="Password" required/>
+                        <input type="text" placeholder="Username" id="username" required/>
+                        <input type="password" placeholder="Password" id="password" required/>
                         <a href="#" class="forgot">Forgot your password?</a>
-                        <button type="submit">Sign In</button>
+                        <button type="submit" onClick={handleSubmit}>Sign In</button>
                         <span>Don't have an account? <a href="/signup">Create now</a></span>
                     </form>
                 </div>
