@@ -14,6 +14,7 @@ function App() {
           <Route path="/signin" element={ <Signin />} />
           <Route path="/signup" element={ <Signup />} />
           <Route path="/predict" element={ <Predict />} />
+          
           <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/>} />
           {/* <Route path="/predict" element={ <Main />} /> */}
           {/* <Route path="/shop" element={ <Shop />} /> */}
