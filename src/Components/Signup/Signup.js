@@ -2,8 +2,49 @@ import Logo from "./Logo.png";
 import lkdin from "./linkedIn.svg";
 import twtr from "./twitter.svg";
 import yt from "./youtube.svg";
-
+import axios from "axios";
 function Signup() {
+    
+    const signup = async (e) =>{
+        e.preventDefault();
+        var username = document.querySelector('#username').value;
+        var email = document.querySelector('#email').value;
+        var password = document.querySelector('#password').value;
+        var confirmpassword = document.querySelector('#cpassword').value;
+        var data = {"username": username, "email": email, "password": password , "confirm_password": confirmpassword};
+        if (!(username && email && password  && confirmpassword ) ){
+            alert("Please fill all the fields");
+            return;
+        }
+        else if(!(email.includes("@")) ){
+            alert("Please enter valid email");
+            return;
+        }
+        else if(password !== confirmpassword  ){
+            alert("Passwords do not match");
+            return;
+        }
+        
+        else{
+        await axios({
+            method: "POST",
+            url: "http://127.0.0.1:8000/register",
+            data: data,
+            headers: {
+                'accept': 'application/json',
+                'content-type':'multipart/form-data',
+            },
+        }).then(response =>
+            {
+                alert("Verify your email address by clicking on the link sent to your mail")
+                window.location.replace('/signin')
+            })
+            .catch(err => {
+                alert(err.response.data.message);
+            })
+        }
+    }
+
     return (
         <>
             <div class="container" id="container">
@@ -29,11 +70,11 @@ function Signup() {
                             </div>
                         </div>
                         <h1>Sign Up</h1>
-                        <input type="text" placeholder="Username*" required/>
-                        <input type="email" placeholder="Email*" required/>
-                        <input type="password" placeholder="Password*" required/>
-                        <input type="password" placeholder="Confirm Password*" required/>
-                        <button type="submit">Sign Up</button>
+                        <input type="text" placeholder="Username*" id = "username" required/>
+                        <input type="email" placeholder="Email*" id ="email" required/>
+                        <input type="password" placeholder="Password*" id = "password" required/>
+                        <input type="password" placeholder="Confirm Password*" id = "cpassword" required/>
+                        <button type="submit" onClick={signup}>Sign Up</button>
                         <span>Already have an account? <a href="/signin">Sign in now</a></span>
                     </form>
                 </div>

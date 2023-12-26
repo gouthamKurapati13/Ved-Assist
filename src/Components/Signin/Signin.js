@@ -31,18 +31,11 @@ function Signin() {
             },
         })
         .then(res=>{
-            console.log("Successful");
-            console.log(res.data);
             localStorage.setItem('vedtoken', res.data.token);
             window.location.replace('/shop');
-            
         })
         .catch(err => {
-            // console.log("Error");
-            // console.log(err.response.status);
-            if(err.response.status === 442){
-                alert("Wrong Username or Password");
-            }
+            alert(err.response.data.message);
         })
     }
     return (

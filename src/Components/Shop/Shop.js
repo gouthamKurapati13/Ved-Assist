@@ -7,7 +7,10 @@ import axios from "axios";
 import { useState } from "react";
 
 function Shop() {
-    
+    const logout = () =>{
+        localStorage.removeItem('vedtoken');
+        window.location.replace('/');
+    }
     const [searchText , setSearchText] = useState("");
     const [medicines, setMedicines] = useState([]);
     var handleSearch = async () =>{
@@ -70,10 +73,10 @@ function Shop() {
                             <h3>Username</h3>
                             <ul>
                             <li>
-                                <img src="" /><a href="#"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+                                <a href="#"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
                             </li>
                             <li>
-                                <img src="" /><a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                <a  onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
                             </li>
                             </ul>
                         </div>

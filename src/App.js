@@ -15,7 +15,9 @@ function App() {
           <Route path="/signin" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/> } />
           <Route path="/signup" element={ <Signup />} />
           <Route path="/predict" element={ <Predict />} />
+
           <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/>:<Signin/>}/>
+
         </Routes>
       </BrowserRouter>
     </>
