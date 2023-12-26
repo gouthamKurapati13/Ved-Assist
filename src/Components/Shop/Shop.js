@@ -5,8 +5,16 @@ import Logo from "./Logo.png";
 import Avatar from "./avatar.jpg";
 import axios from "axios";
 import { useState } from "react";
+import Checkout from "../Checkout/Checkout";
 
 function Shop() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [data, setData] = useState({});
+    const togglePopup = (data) => {
+        setIsOpen(!isOpen);
+        setData(data);
+    }
+
     const logout = () =>{
         localStorage.removeItem('vedtoken');
         window.location.replace('/');
@@ -15,6 +23,8 @@ function Shop() {
     const [medicines, setMedicines] = useState([]);
     var handleSearch = async () =>{
         var Search = new FormData();
+        Search.append("uname", localStorage.getItem("uname"));
+        Search.append("token", localStorage.getItem("vedtoken"));
         Search.append("searchText", searchText);
         await axios({
             method: "POST",
@@ -54,8 +64,10 @@ function Shop() {
             console.log(err);
         })
     };
+
     return (
-        <>             
+        <> 
+            {isOpen && <Checkout togglePopup={togglePopup} data={data} />}            
             <div className="shop">
                 <div className="shop-nav">
                     <div className="logo">
@@ -89,7 +101,7 @@ function Shop() {
                     <div className="medicines-row">
                     {
                         medicines.map((med) => (
-                                    <Medicine name={med.name} desc={med.description} price={med.price}/>
+                            <Medicine data={med} togglePopup={togglePopup} />
                         ))
                     }
                     </div>

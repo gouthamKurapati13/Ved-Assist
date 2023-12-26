@@ -141,14 +141,12 @@ function Predict() {
                             </div>
                             <div className="medicines-row">
                                 {medicines.map((med) => (
-                                    <Medicine name={med.name} desc={med.description} price={med.price}/>
+                                    <Medicine data={med} />
                                 ))}
                             </div>
                         </div>
                     </form>
-
                 </div>
-
 	        </div>
             </div>
 

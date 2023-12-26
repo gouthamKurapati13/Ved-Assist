@@ -32,6 +32,7 @@ function Signin() {
         })
         .then(res=>{
             localStorage.setItem('vedtoken', res.data.token);
+            localStorage.setItem('uname', res.data.uname);
             window.location.replace('/shop');
         })
         .catch(err => {

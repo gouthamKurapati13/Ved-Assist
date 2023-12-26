@@ -13,11 +13,9 @@ function App() {
         <Routes>
           <Route index element={ <Main />} />
           <Route path="/signin" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/> } />
-          <Route path="/signup" element={ <Signup />} />
+          <Route path="/signup" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signup/> } />
           <Route path="/predict" element={ <Predict />} />
-
           <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/>:<Signin/>}/>
-
         </Routes>
       </BrowserRouter>
     </>
