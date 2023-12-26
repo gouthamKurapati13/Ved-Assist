@@ -11,13 +11,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={ <Main />} />
-          <Route path="/signin" element={ <Signin />} />
+          <Route path="/signin" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/> } />
           <Route path="/signup" element={ <Signup />} />
           <Route path="/predict" element={ <Predict />} />
-          <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/>} />
-          {/* <Route path="/predict" element={ <Main />} /> */}
-          {/* <Route path="/shop" element={ <Shop />} /> */}
-          {/* <Route path="/shop" element={ <Shop />} /> */}
+          <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/>} />
         </Routes>
       </BrowserRouter>
     </>
