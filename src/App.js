@@ -6,6 +6,7 @@ import Predict from './Components/Predict/Predict';
 import Shop from './Components/Shop/Shop';
 
 function App() {
+  
   return (
     <>
       <BrowserRouter>
@@ -13,8 +14,8 @@ function App() {
           <Route index element={ <Main />} />
           <Route path="/signin" element={ <Signin />} />
           <Route path="/signup" element={ <Signup />} />
-          <Route path="/predict" element={ <Predict />} />
-          <Route path="/shop" element={ <Shop />} />
+          <Route path="/predict" element={ <Predict /> } />
+          <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signin/>} />
           {/* <Route path="/predict" element={ <Main />} /> */}
           {/* <Route path="/shop" element={ <Shop />} /> */}
           {/* <Route path="/shop" element={ <Shop />} /> */}

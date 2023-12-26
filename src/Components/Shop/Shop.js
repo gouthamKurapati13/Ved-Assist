@@ -7,6 +7,7 @@ import axios from "axios";
 import { useState } from "react";
 
 function Shop() {
+    
     const [searchText , setSearchText] = useState("");
     const [medicines, setMedicines] = useState([]);
     var handleSearch = async () =>{
