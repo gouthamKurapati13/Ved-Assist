@@ -29,7 +29,7 @@ function Orders() {
         .then(res=>{
             console.log("Successful");
             console.log(res.data.orders);
-            setOrders(orders);
+            setOrders(res.data.orders);
         })
         .catch(err => {
             console.log("Error");
