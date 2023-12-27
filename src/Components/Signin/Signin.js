@@ -4,8 +4,10 @@ import lkdin from "./linkedIn.svg";
 import twtr from "./twitter.svg";
 import yt from "./youtube.svg";
 import axios from "axios";
+import { useState } from "react";
 
 function Signin() {
+    const [spinner, setSpinner] = useState("");
     var handleSubmit = async (e) => {
         e.preventDefault();
         var uname = document.querySelector('#username').value;
@@ -16,7 +18,7 @@ function Signin() {
                 "username": uname,
                 "password": pass,
             }
-            console.log(data);
+            setSpinner("loader");
         }
         else {
             alert("please enter all fields...");
@@ -34,6 +36,7 @@ function Signin() {
             localStorage.removeItem('uname');
             localStorage.setItem('vedtoken', res.data.token);
             localStorage.setItem('uname', res.data.uname);
+            setSpinner("");
             window.location.replace('/shop');
         })
         .catch(err => {
@@ -42,6 +45,9 @@ function Signin() {
     }
     return (
         <>
+            <div className="loader-div">
+                <div className={spinner}></div>
+            </div>
             <div class="container" id="container">
                 <div class="form-container log-in-container">
                     <form action="#">

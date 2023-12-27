@@ -8,6 +8,7 @@ import { useState } from "react";
 import Checkout from "../Checkout/Checkout";
 
 function Shop() {
+    const [spinner, setSpinner] = useState("");
     const [isOpen, setIsOpen] = useState(false);
     const [data, setData] = useState({});
     const togglePopup = (data) => {
@@ -26,6 +27,7 @@ function Shop() {
         Search.append("uname", localStorage.getItem("uname"));
         Search.append("token", localStorage.getItem("vedtoken"));
         Search.append("searchText", searchText);
+        setSpinner("loader");
         await axios({
             method: "POST",
             url: "http://127.0.0.1:8000/shop/search",
@@ -37,13 +39,14 @@ function Shop() {
         })
         .then(res=>
             {
-                console.log("Search Successful");
+                setSpinner("");
                 setMedicines(res.data.medicines);
             })
             .then(err =>{
             })
     }
     window.onload = async (event) => {
+        setSpinner("loader");
         await axios({
             method: "POST",
             url: "http://127.0.0.1:8000/shop",
@@ -55,8 +58,7 @@ function Shop() {
            
         })
         .then(res=>{
-            console.log("Successful");
-            console.log(res.data.medicines);
+            setSpinner("");
             setMedicines(res.data.medicines);
         })
         .catch(err => {
@@ -98,6 +100,9 @@ function Shop() {
                     <h1 className="heading">Shop</h1>
                     <h2>One stop for all your Ayurvedic medicines</h2>
                     <p className="caution-mssg">Make sure to read the description before buying</p>
+                    <div className="loader-div">
+                        <div className={spinner}></div>
+                    </div>
                     <div className="medicines-row">
                     {
                         medicines.map((med) => (

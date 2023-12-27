@@ -6,6 +6,7 @@ import OrderCard from "./OrderCard";
 import axios from "axios";
 
 function Orders() {
+    const [spinner, setSpinner] = useState("");
     const [orders, setOrders] = useState([]);
     const logout = () =>{
         localStorage.removeItem('vedtoken');
@@ -13,6 +14,7 @@ function Orders() {
     }
 
     window.onload = async (event) => {
+        setSpinner("loader");
         await axios({
             method: "POST",
             url: "http://127.0.0.1:8000/history",
@@ -27,13 +29,11 @@ function Orders() {
            
         })
         .then(res=>{
-            console.log("Successful");
-            console.log(res.data.orders);
+            setSpinner("");
             setOrders(res.data.orders);
         })
         .catch(err => {
-            console.log("Error");
-            console.log(err);
+            setSpinner("");
         })
     };
 
@@ -65,7 +65,9 @@ function Orders() {
                 <div className="shop-container">
                     <h1 className="heading">Orders</h1>
                     <h2>Here are your past orders</h2>
-                    {/* <p className="caution-mssg">Make sure to read the description before buying</p> */}
+                    <div className="loader-div">
+                        <div className={spinner}></div>
+                    </div>
                     <div className="orders-row">
                     {
                             orders.map((order) => (

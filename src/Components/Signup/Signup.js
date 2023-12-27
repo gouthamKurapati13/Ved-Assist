@@ -3,8 +3,11 @@ import lkdin from "./linkedIn.svg";
 import twtr from "./twitter.svg";
 import yt from "./youtube.svg";
 import axios from "axios";
+
+import { useState } from "react";
+
 function Signup() {
-    
+    const [spinner, setSpinner] = useState("");
     const signup = async (e) =>{
         e.preventDefault();
         var username = document.querySelector('#username').value;
@@ -26,6 +29,7 @@ function Signup() {
         }
         
         else{
+            setSpinner("loader");
         await axios({
             method: "POST",
             url: "http://127.0.0.1:8000/register",
@@ -36,8 +40,9 @@ function Signup() {
             },
         }).then(response =>
             {
-                alert("Verify your email address by clicking on the link sent to your mail")
-                window.location.replace('/signin')
+                setSpinner("");
+                alert("Verify your email address by clicking on the link sent to your mail");
+                window.location.replace('/signin');
             })
             .catch(err => {
                 alert(err.response.data.message);
@@ -47,6 +52,9 @@ function Signup() {
 
     return (
         <>
+            <div className="loader-div">
+                <div className={spinner}></div>
+            </div>
             <div class="container" id="container">
                 <div class="form-container log-in-container">
                     <form action="#">
