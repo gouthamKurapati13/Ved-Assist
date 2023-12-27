@@ -5,6 +5,7 @@ import axios from "axios";
 function Checkout({togglePopup, data}) {
    const handleSubmit = async (data) => {
     let info = {
+      "uname" : localStorage.getItem("uname"),
       "prodName" : data.name,
       "price" : data.price,
       "doorNo" : document.querySelector("#doorNo").value,
@@ -14,7 +15,7 @@ function Checkout({togglePopup, data}) {
     }
     await axios({
         method: "POST",
-        url: "http://127.0.0.1:8000/shop",
+        url: "http://127.0.0.1:8000/buy",
         data: info,
         headers: {
             'accept': 'application/json',
@@ -25,6 +26,7 @@ function Checkout({togglePopup, data}) {
     .then(res=>{
         console.log("Successful");
         alert(res.data.message);
+        togglePopup();
     })
     .catch(err => {
         console.log("Error");
