@@ -8,6 +8,7 @@
   padding-left: 10rem;
   padding-right: 10rem;
   text-align: center;
+  gap: auto;
 }
 
 #team h1 {
@@ -20,6 +21,10 @@
   /* margin-right: 10rem; */
   display: grid;
   grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
   transform: translateY(-3rem);
 }
 
