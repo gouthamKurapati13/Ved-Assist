@@ -27,7 +27,7 @@ function About() {
                             recommendations based on the
                             user's symptoms and preferences.
                         </p>
-                        <button>Predict Now</button>
+                        <button onClick={(e)=>{e.preventDefault();window.location.replace("/predict")}}>Predict Now</button>
                     </div>
                     <div className="about-desc">
                         <h3>The Shop</h3>
@@ -41,7 +41,7 @@ function About() {
                             effective treatments, and the
                             convenience of modern e-commerce.
                         </p>
-                        <button>Shop Now</button>
+                        <button onClick={(e)=>{e.preventDefault();window.location.replace("/shop")}}>Shop Now</button>
                     </div>
                 </div>
             </section>
