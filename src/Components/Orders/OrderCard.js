@@ -20,7 +20,7 @@ function OrderCard({name, id, date, price}) {
                     </tr>
                     <tr>
                         <td><b>Price</b></td>
-                        <td>{price}</td>
+                        <td>Rs. {price}/-</td>
                     </tr>
                 </table>
             </div>
