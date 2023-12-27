@@ -56,20 +56,6 @@ function Signin() {
                             <div className="logo">
                                 <a href="/"><img src={Logo} /></a>
                             </div>
-                            <div className="footer_middle_left_list">
-                                <div className="footer_icons">
-                                    <a href="https://www.linkedin.com">
-                                        <img src={lkdin} alt={lkdin} /></a>
-                                </div>
-                                <div className="footer_icons">
-                                    <a href="https://twitter.com/?lang=en">
-                                        <img src={twtr} alt={twtr} /></a>
-                                </div>
-                                <div className="footer_icons">
-                                    <a href="https://www.youtube.com/">
-                                        <img src={yt} alt=""/></a>
-                                </div>
-                            </div>
                         </div>
                         <h1 class="main-heading">Sign In</h1>
                         <input type="text" placeholder="Username" id="username" required/>

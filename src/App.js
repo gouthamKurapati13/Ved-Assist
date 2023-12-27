@@ -5,7 +5,6 @@ import Signup from './Components/Signup/Signup';
 import Predict from './Components/Predict/Predict';
 import Shop from './Components/Shop/Shop';
 import Orders from './Components/Orders/Orders';
-
 function App() {
   
   return (

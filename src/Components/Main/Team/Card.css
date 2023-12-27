@@ -21,6 +21,7 @@
     padding-bottom: 0;
     height: fit-content;
     min-width: 25%;
+    cursor: default;
 }
   
   #dev-div h3 {

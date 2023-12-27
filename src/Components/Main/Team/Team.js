@@ -10,7 +10,7 @@ function Team() {
 
 
     <section id="team">
-      <h1>Our Team</h1>
+      <h1 className="main-heading">Our Team</h1>
       <div className="team-row">
         <Card Devimg={Devimg} />
         <Card Devimg={Devimg} />

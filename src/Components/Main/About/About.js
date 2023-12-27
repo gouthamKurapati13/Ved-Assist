@@ -4,7 +4,7 @@ function About() {
     return (
         <>
             <section id="about">
-                <h1>About Us</h1>
+                <h1 className="main-heading">About Us</h1>
                 <div className="about-desc">
                     <h3>What is VedAssist?</h3>
                     <p>

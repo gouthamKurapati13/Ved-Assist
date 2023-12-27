@@ -3,6 +3,7 @@ import Navbar from "../Main/Navbar/Navbar";
 import Medicine from "./Medicine/Medicine";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Footer from "../Main/Footer/Footer";
 
 function Predict() {
     const [medicines, setMedicines] = useState([]);
@@ -149,7 +150,7 @@ function Predict() {
                 </div>
 	        </div>
             </div>
-
+            <Footer />
         </>
     );
 }
