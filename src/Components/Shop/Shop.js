@@ -82,7 +82,7 @@ function Shop() {
                             <img src={Avatar} />
                         </div>
                         <div class="menu">
-                            <h3>Username</h3>
+                            <h3>{localStorage.getItem("uname")}</h3>
                             <ul>
                             <li>
                                 <a href="#"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>

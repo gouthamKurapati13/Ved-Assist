@@ -25,6 +25,14 @@
 
 }
 
+td {
+  padding-left: 1rem;
+}
+
+td:nth-child(1) {
+  padding-left: 0;
+}
+
 /* Popup style */
 .popup-box {
   position: fixed;
