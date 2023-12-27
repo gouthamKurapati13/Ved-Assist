@@ -6,7 +6,7 @@ import OrderCard from "./OrderCard";
 import axios from "axios";
 
 function Orders() {
-    const [orders, setOrders] = useState({});
+    const [orders, setOrders] = useState([]);
     const logout = () =>{
         localStorage.removeItem('vedtoken');
         window.location.replace('/');
@@ -29,6 +29,7 @@ function Orders() {
         .then(res=>{
             console.log("Successful");
             console.log(res.data.orders);
+            setOrders(orders);
         })
         .catch(err => {
             console.log("Error");
@@ -66,11 +67,11 @@ function Orders() {
                     <h2>Here are your past orders</h2>
                     {/* <p className="caution-mssg">Make sure to read the description before buying</p> */}
                     <div className="orders-row">
-                        {
+                    {
                             orders.map((order) => (
                                 <OrderCard name={order.name} price={order.price} date={order.date} id={order.id} />
                             ))
-                        }
+                    }
                     </div>
                 </div>
             </div>
