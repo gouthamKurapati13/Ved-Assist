@@ -32,7 +32,7 @@ function Signup() {
             setSpinner("loader");
         await axios({
             method: "POST",
-            url: "http://127.0.0.1:8000/register",
+            url: "https://vedassist-kil3.onrender.com/register",
             data: data,
             headers: {
                 'accept': 'application/json',
@@ -61,20 +61,6 @@ function Signup() {
                         <div className="nav">
                             <div className="logo">
                                 <a href="/"><img src={Logo} /></a>
-                            </div>
-                            <div className="footer_middle_left_list">
-                                <div className="footer_icons">
-                                    <a href="https://www.linkedin.com">
-                                        <img src={lkdin} alt={lkdin} /></a>
-                                </div>
-                                <div className="footer_icons">
-                                    <a href="https://twitter.com/?lang=en">
-                                        <img src={twtr} alt={twtr} /></a>
-                                </div>
-                                <div className="footer_icons">
-                                    <a href="https://www.youtube.com/">
-                                        <img src={yt} alt=""/></a>
-                                </div>
                             </div>
                         </div>
                         <h1>Sign Up</h1>
