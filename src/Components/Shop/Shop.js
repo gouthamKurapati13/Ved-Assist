@@ -85,7 +85,7 @@ function Shop() {
                             <h3>{localStorage.getItem("uname")}</h3>
                             <ul>
                             <li>
-                                <a href="#"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+                                <a href="/shop/orders"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
                             </li>
                             <li>
                                 <a  onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>

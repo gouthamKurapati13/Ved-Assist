@@ -4,6 +4,7 @@ import Signin from './Components/Signin/Signin';
 import Signup from './Components/Signup/Signup';
 import Predict from './Components/Predict/Predict';
 import Shop from './Components/Shop/Shop';
+import Orders from './Components/Orders/Orders';
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signup" element={ (localStorage.getItem('vedtoken')) ? <Shop/> : <Signup/> } />
           <Route path="/predict" element={ <Predict />} />
           <Route path="/shop" element={ (localStorage.getItem('vedtoken')) ? <Shop/>:<Signin/>}/>
+          <Route path="/shop/orders" element={ (localStorage.getItem('vedtoken')) ? <Orders /> : <Signin />}/>
         </Routes>
       </BrowserRouter>
     </>
