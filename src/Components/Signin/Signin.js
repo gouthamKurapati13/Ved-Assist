@@ -21,7 +21,8 @@ function Signin() {
             setSpinner("loader");
         }
         else {
-            alert("please enter all fields...");
+            alert("Please enter all fields");
+            return;
         }
         await axios({
             method: "POST",

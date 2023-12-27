@@ -38,7 +38,8 @@
 }
 
 .predict-output {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   justify-content: center;
   align-items: center;
   flex-direction: column;

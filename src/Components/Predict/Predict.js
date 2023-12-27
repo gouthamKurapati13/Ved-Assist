@@ -39,7 +39,7 @@ function Predict() {
             setSpinner("loader");
         }
         else {
-            alert("please enter all fields...");
+            alert("Please fill all the fields");
         }
         await axios({
             method: "POST",
@@ -141,7 +141,7 @@ function Predict() {
                             </div>
                             <div className="medicines-row">
                                 {medicines.map((med) => (
-                                    <Medicine data={med} />
+                                    <Medicine data={med} togglePopup={()=>{window.location.replace("/shop")}}/>
                                 ))}
                             </div>
                         </div>

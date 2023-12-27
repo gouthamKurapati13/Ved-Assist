@@ -30,7 +30,7 @@ function Navbar() {
                     <li><a href="/#team" onClick={handleShowNavbar}>Team</a></li>
                     <div className="mob-btn-grp">
                         <button onClick={event =>  window.location.href='predict'}>Predict</button>
-                        <button>Shop</button>
+                        <button onClick={event =>  window.location.href='/shop'}>Shop</button>
                     </div>
                 </ul>
                 <div className="btn-grp">
