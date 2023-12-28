@@ -42,7 +42,7 @@ function Checkout({togglePopup, data}) {
         <>
           <div className="popup-box">
             <form>
-              <h1>Checkout</h1>
+              <h1 className="main-heading">Checkout</h1>
               <div className="checkout-items">
                 <div className="inputs">
                     <h2>Delivery Address</h2>
