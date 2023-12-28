@@ -63,7 +63,7 @@ function Signup() {
                                 <a href="/"><img src={Logo} /></a>
                             </div>
                         </div>
-                        <h1>Sign Up</h1>
+                        <h1 className="main-heading">Sign Up</h1>
                         <input type="text" placeholder="Username*" id = "username" required/>
                         <input type="email" placeholder="Email*" id ="email" required/>
                         <input type="password" placeholder="Password*" id = "password" required/>
