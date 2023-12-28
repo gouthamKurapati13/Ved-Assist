@@ -20,6 +20,7 @@
 
 .med-container p { 
   height: 20%;
+  text-align: justify;
 }
 
 /* surface and ipad */
@@ -132,4 +133,13 @@
     border-color: rgba(255, 255, 255, 0.9);
     filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
     transition: all .3s ease;    
+  }
+
+  @media only screen and (max-width: 768px) { 
+    .shop-container .medicines-row .med-container {
+      width: 100% !important;
+    }
+    .shop-container h2, .shop-container p {
+      text-align: justify !important; 
+    }
   }

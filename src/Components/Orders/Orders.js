@@ -50,7 +50,7 @@ function Orders() {
                             <img src={Avatar} />
                         </div>
                         <div class="menu">
-                            <h3>{localStorage.getItem("uname")}</h3>
+                            <h3><b>{localStorage.getItem("uname")}</b></h3>
                             <ul>
                             <li>
                                 <a href="#"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>

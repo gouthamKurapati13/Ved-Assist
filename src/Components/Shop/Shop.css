@@ -213,21 +213,29 @@
     align-items: center;
 }
 
-.search {
-    min-width: 60;
-    margin-right: 8rem; 
+.search button {
+  width: 5% !important;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+.shop-nav .logo img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.action .profile {
+  width: 40px;
+  height: 40px;
+}
+
+.shop-nav {
+  gap: 12px;
 }
 
 .search input {
     max-width: 100%; 
     margin-right: 0;
 }
-
-.search button {
-    width: 40px; 
-    padding-right: 2.5rem;
-}
-
   .shop-container .medicines-row {
       display: flex;
       flex-direction: column;

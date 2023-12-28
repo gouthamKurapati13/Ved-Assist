@@ -6,6 +6,7 @@ import Avatar from "./avatar.jpg";
 import axios from "axios";
 import { useState } from "react";
 import Checkout from "../Checkout/Checkout";
+import Footer from "../Main/Footer/Footer";
 
 function Shop() {
     const [spinner, setSpinner] = useState("");
@@ -71,31 +72,31 @@ function Shop() {
         <> 
             {isOpen && <Checkout togglePopup={togglePopup} data={data} />}            
             <div className="shop">
-                <div className="shop-nav">
-                    <div className="logo">
-                        <a href="/"><img src={Logo} /></a>
-                    </div>
-                    <div className="search">
-                        <input type="text" name = "searchText" value = {searchText} onChange = {(e)=>setSearchText(e.target.value)} placeholder="Search.." />
-                        <button type="submit" onClick={handleSearch}><i class="fa fa-search"></i></button>
-                    </div>
-                    <div class="action">
-                        <div class="profile">
-                            <img src={Avatar} />
+                    <div className="shop-nav">
+                        <div className="logo">
+                            <a href="/"><img src={Logo} /></a>
                         </div>
-                        <div class="menu">
-                            <h3>{localStorage.getItem("uname")}</h3>
-                            <ul>
-                            <li>
-                                <a href="/shop/orders"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
-                            </li>
-                            <li>
-                                <a  onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
-                            </li>
-                            </ul>
+                        <div className="search">
+                            <input type="text" name = "searchText" value = {searchText} onChange = {(e)=>setSearchText(e.target.value)} placeholder="Search.." />
+                            <button type="submit" onClick={handleSearch}><i class="fa fa-search"></i></button>
+                        </div>
+                        <div class="action">
+                            <div class="profile">
+                                <img src={Avatar} />
+                            </div>
+                            <div class="menu">
+                                <h3><b>{localStorage.getItem("uname")}</b></h3>
+                                <ul>
+                                <li>
+                                    <a href="/shop/orders"><i class="fa fa-history" aria-hidden="true"></i> Order History</a>
+                                </li>
+                                <li>
+                                    <a  onClick={logout}><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                                </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>   
                 <div className="shop-container">
                     <h1 className="heading">Shop</h1>
                     <h2>One stop for all your Ayurvedic medicines</h2>
@@ -112,6 +113,7 @@ function Shop() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }

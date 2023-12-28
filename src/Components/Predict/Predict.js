@@ -10,7 +10,7 @@ function Predict() {
     const [spinner, setSpinner] = useState("");
     useEffect(() => {
         if (spinner==="loader")
-            window.scrollTo(0, 200);
+            window.scrollTo(0, 500);
       }, [spinner]);
     var handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,7 +36,6 @@ function Predict() {
                 "jointPain": (document.getElementById('JointPain').checked)?1:0,
                 "throatPain": (document.getElementById('ThroatPain').checked)?1:0
             }
-            console.log(data);
             setSpinner("loader");
         }
         else {
@@ -137,20 +136,22 @@ function Predict() {
                         </div>
                         <button type="submit" onClick={handleSubmit}>Predict Now</button>
                         <div className="predit-output">
+                        <b>Note : The prediction is made by an AI Model trained using sample data, and thus might not be accurate. Please verify before usage.</b>
                             <div className="loader-div">
                                 <div className={spinner}></div>
                             </div>
                             <div className="medicines-row">
-                                {medicines.map((med) => (
-                                    <Medicine data={med} togglePopup={()=>{window.location.replace("/shop")}}/>
-                                ))}
+                                {
+                                    medicines.map((med) => (
+                                        <   Medicine data={med} togglePopup={()=>{window.location.replace("/shop")}}/>
+                                    ))
+                                }
                             </div>
                         </div>
                     </form>
                 </div>
 	        </div>
             </div>
-            <Footer />
         </>
     );
 }

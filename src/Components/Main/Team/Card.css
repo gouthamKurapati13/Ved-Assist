@@ -78,5 +78,7 @@
   @media only screen and (max-width: 1028px) {
     .card {
         transform: translateY(-4rem);
+        margin-top: 5rem;
+        width: 15rem !important;
     }
   }
