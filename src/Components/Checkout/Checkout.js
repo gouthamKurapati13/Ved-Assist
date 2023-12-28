@@ -4,6 +4,10 @@ import axios from "axios";
 
 function Checkout({togglePopup, data}) {
    const handleSubmit = async (data) => {
+    if (!(document.querySelector("#doorNo").value && document.querySelector("#street").value && document.querySelector("#city").value && document.querySelector("#pincode").value )) {
+      alert("Please fill all the fields.");
+      return;
+    }
     let info = {
       "uname" : localStorage.getItem("uname"),
       "prodName" : data.name,
@@ -42,10 +46,10 @@ function Checkout({togglePopup, data}) {
               <div className="checkout-items">
                 <div className="inputs">
                     <h2>Delivery Address</h2>
-                    <input type="text" id="doorNo" placeholder="Door No./Building No." />
-                    <input type="text" id="street" placeholder="Street Name" />
-                    <input type="text" id="city" placeholder="City" />
-                    <input type="text" id="pincode" placeholder="Pincode" />
+                    <input type="text" id="doorNo" placeholder="Door No./Building No.*" />
+                    <input type="text" id="street" placeholder="Street Name*" />
+                    <input type="text" id="city" placeholder="City*" />
+                    <input type="text" id="pincode" placeholder="Pincode*" />
                   </div>
                 <div className="summary">
                   <h2>Order Summary</h2>

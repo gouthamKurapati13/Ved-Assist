@@ -86,4 +86,9 @@ td:nth-child(1) {
   .checkout-items { 
     flex-direction: column;
   }
+
+  .checkout-items .summary {
+    padding-left: 0rem;
+  }
+
 }
